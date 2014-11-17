@@ -13,10 +13,8 @@ main:
 	.cfi_offset 6, -16
 	movq	%rsp, %rbp
 	.cfi_def_cfa_register 6
-	movl	$.LC0, %eax
-	movq	%rax, %rdi
-	movl	$0, %eax
-	call	printf
+	movl	$.LC0, %edi
+	call	puts
 	leave
 	.cfi_def_cfa 7, 8
 	ret
